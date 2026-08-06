@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Juanva Solutions LLC | Business Solutions &amp; General Services</title>
+<meta name="description" content="Juanva Solutions LLC — a U.S.-registered general services company. Whatever your business needs, if it's lawful and within our reach, we take it on. Bilingual service in English and Spanish.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0b1c2c;
+  --navy-2:#12293f;
+  --gold:#e8a33d;
+  --gold-soft:#f7c877;
+  --text:#1c2b38;
+  --muted:#5c6f80;
+  --line:#e3e9ef;
+  --bg:#ffffff;
+  --bg-alt:#f6f8fa;
+  --max:1140px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;color:var(--text);background:var(--bg);line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+a{color:inherit;text-decoration:none}
+img{max-width:100%}
+header{position:sticky;top:0;z-index:100;background:rgba(11,28,44,.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.08)}
+nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:11px;color:#fff}
+.logo-mark{width:38px;height:38px;border-radius:9px;background:linear-gradient(135deg,var(--gold),#c9822a);display:grid;place-items:center;font-weight:800;font-size:16px;color:var(--navy);letter-spacing:-.5px}
+.logo-text{font-weight:700;font-size:16.5px;letter-spacing:-.2px;line-height:1.15}
+.logo-text span{display:block;font-weight:400;font-size:10.5px;letter-spacing:1.6px;color:var(--gold-soft);text-transform:uppercase}
+.nav-links{display:flex;align-items:center;gap:30px}
+.nav-links a{color:#cfdbe6;font-size:14.5px;font-weight:500;transition:color .18s}
+.nav-links a:hover{color:var(--gold)}
+.btn{display:inline-block;padding:12px 24px;border-radius:8px;font-weight:600;font-size:14.5px;transition:all .2s;cursor:pointer;border:none;font-family:inherit}
+.btn-gold{background:var(--gold);color:var(--navy)}
+.btn-gold:hover{background:var(--gold-soft);transform:translateY(-1px)}
+.btn-ghost{border:1.5px solid rgba(255,255,255,.35);color:#fff;background:transparent}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+.menu-btn{display:none;background:none;border:none;color:#fff;font-size:26px;cursor:pointer;line-height:1}
+.hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy-2) 55%,#1b3d59 100%);color:#fff;padding:104px 0 112px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-160px;top:-160px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(232,163,61,.16),transparent 68%)}
+.hero-inner{position:relative;z-index:2;max-width:780px}
+.eyebrow{display:inline-block;padding:6px 14px;border-radius:100px;background:rgba(232,163,61,.14);border:1px solid rgba(232,163,61,.32);color:var(--gold-soft);font-size:12.5px;font-weight:600;letter-spacing:.6px;text-transform:uppercase;margin-bottom:22px}
+.hero h1{font-size:clamp(2.1rem,5vw,3.5rem);font-weight:800;line-height:1.12;letter-spacing:-1.2px;margin-bottom:22px}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero p{font-size:1.13rem;color:#c3d2df;max-width:620px;margin-bottom:34px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero-stats{display:flex;gap:44px;margin-top:56px;flex-wrap:wrap}
+.stat strong{display:block;font-size:1.9rem;font-weight:800;color:var(--gold);letter-spacing:-1px}
+.stat span{font-size:13.5px;color:#a9bccd}
+section{padding:92px 0}
+.alt{background:var(--bg-alt)}
+.sec-head{max-width:680px;margin-bottom:52px}
+.sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+.tag{display:block;font-size:12.5px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+h2{font-size:clamp(1.7rem,3.4vw,2.4rem);font-weight:800;letter-spacing:-.9px;line-height:1.2;margin-bottom:16px}
+.sec-head p{color:var(--muted);font-size:1.04rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:32px 28px;transition:all .22s}
+.card:hover{transform:translateY(-4px);box-shadow:0 14px 36px rgba(11,28,44,.10);border-color:#cfd9e3}
+.icon{width:46px;height:46px;border-radius:11px;background:linear-gradient(135deg,rgba(232,163,61,.18),rgba(232,163,61,.06));display:grid;place-items:center;margin-bottom:18px}
+.icon svg{width:23px;height:23px;stroke:var(--gold);fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.card h3{font-size:1.14rem;font-weight:700;margin-bottom:9px;letter-spacing:-.3px}
+.card p{color:var(--muted);font-size:.95rem}
+.card.feature{background:linear-gradient(160deg,var(--navy),var(--navy-2));border:none;color:#fff}
+.card.feature h3{color:#fff}
+.card.feature p{color:#bacbd9}
+.card.feature .icon{background:rgba(232,163,61,.2)}
+.why-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:64px;align-items:center}
+.why-list{list-style:none;display:grid;gap:26px}
+.why-list li{display:flex;gap:16px}
+.check{flex-shrink:0;width:26px;height:26px;border-radius:50%;background:var(--gold);display:grid;place-items:center;margin-top:3px}
+.check svg{width:14px;height:14px;stroke:var(--navy);fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.why-list h4{font-size:1.03rem;font-weight:700;margin-bottom:4px}
+.why-list p{color:var(--muted);font-size:.95rem}
+.why-panel{background:linear-gradient(160deg,var(--navy),var(--navy-2));border-radius:18px;padding:44px 38px;color:#fff}
+.why-panel h3{font-size:1.45rem;font-weight:800;letter-spacing:-.6px;margin-bottom:14px}
+.why-panel p{color:#bacbd9;font-size:.97rem;margin-bottom:26px}
+.why-panel .btn{width:100%;text-align:center}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:28px;counter-reset:s}
+.step{position:relative;padding-top:14px}
+.step::before{counter-increment:s;content:"0" counter(s);display:block;font-size:2.4rem;font-weight:800;color:rgba(232,163,61,.32);letter-spacing:-2px;line-height:1;margin-bottom:10px}
+.step h4{font-size:1.06rem;font-weight:700;margin-bottom:7px}
+.step p{color:var(--muted);font-size:.94rem}
+.contact-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:60px;align-items:start}
+.contact-info{display:grid;gap:22px;margin-top:30px}
+.ci{display:flex;gap:14px;align-items:flex-start}
+.ci-icon{flex-shrink:0;width:40px;height:40px;border-radius:10px;background:rgba(232,163,61,.13);display:grid;place-items:center}
+.ci-icon svg{width:19px;height:19px;stroke:var(--gold);fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.ci strong{display:block;font-size:13px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:600;margin-bottom:2px}
+.ci a,.ci span{font-size:1.02rem;font-weight:600;color:var(--text)}
+.ci a:hover{color:var(--gold)}
+form{background:#fff;border:1px solid var(--line);border-radius:16px;padding:34px;box-shadow:0 4px 22px rgba(11,28,44,.05)}
+.field{margin-bottom:18px}
+label{display:block;font-size:13.5px;font-weight:600;margin-bottom:7px}
+input,textarea,select{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:9px;font-family:inherit;font-size:15px;color:var(--text);background:#fdfdfe;transition:border-color .18s,box-shadow .18s}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(232,163,61,.15)}
+textarea{resize:vertical;min-height:118px}
+form .btn{width:100%;padding:14px;font-size:15px}
+.form-note{text-align:center;font-size:12.5px;color:var(--muted);margin-top:13px}
+footer{background:var(--navy);color:#93a8ba;padding:56px 0 30px;font-size:14px}
+.f-top{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,.09)}
+.f-brand{max-width:330px}
+.f-brand p{margin-top:14px;font-size:13.5px;line-height:1.7}
+.f-col h5{color:#fff;font-size:13px;text-transform:uppercase;letter-spacing:1.2px;margin-bottom:14px;font-weight:700}
+.f-col a{display:block;margin-bottom:9px;transition:color .18s}
+.f-col a:hover{color:var(--gold)}
+.f-bot{padding-top:24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px}
+@media(max-width:900px){
+  .why-grid,.contact-grid{grid-template-columns:1fr;gap:40px}
+}
+@media(max-width:760px){
+  .nav-links{position:absolute;top:72px;left:0;right:0;background:var(--navy);flex-direction:column;align-items:stretch;gap:0;padding:8px 24px 20px;display:none;border-bottom:1px solid rgba(255,255,255,.1)}
+  .nav-links.open{display:flex}
+  .nav-links a{padding:13px 0;border-bottom:1px solid rgba(255,255,255,.07)}
+  .nav-links .btn{margin-top:14px;text-align:center}
+  .menu-btn{display:block}
+  section{padding:66px 0}
+  .hero{padding:70px 0 78px}
+  .hero-stats{gap:30px;margin-top:40px}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <nav>
+      <a href="#top" class="logo">
+        <div class="logo-mark">JV</div>
+        <div class="logo-text">Juanva Solutions<span>LLC</span></div>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#services">What We Do</a>
+        <a href="#about">Why Us</a>
+        <a href="#process">How We Work</a>
+        <a href="#contact" class="btn btn-gold">Request a Quote</a>
+      </div>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">&#9776;</button>
+    </nav>
+  </div>
+</header>
+<div class="hero" id="top">
+  <div class="wrap hero-inner">
+    <span class="eyebrow">U.S.-Registered Company</span>
+    <h1>If it's <em>lawful</em> and it needs to get done, let's talk.</h1>
+    <p>Juanva Solutions LLC is a general services company. We're not boxed into one industry: tell us what you need, we'll tell you honestly whether we can do it, and then we get it done. Direct communication, in English and Spanish.</p>
+    <div class="hero-cta">
+      <a href="#contact" class="btn btn-gold">Tell Us What You Need</a>
+      <a href="#services" class="btn btn-ghost">See What We Do</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><strong>LLC</strong><span>Registered U.S. business</span></div>
+      <div class="stat"><strong>EN / ES</strong><span>Fully bilingual service</span></div>
+      <div class="stat"><strong>24 hrs</strong><span>Response to every inquiry</span></div>
+    </div>
+  </div>
+</div>
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="tag">What We Do</span>
+      <h2>Versatile by design</h2>
+      <p>We don't limit ourselves to a single niche — and that's the advantage. If the work is lawful and within our reach, we'll take it on. Here are some of the areas we cover.</p>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M20 7h-9M14 17H5"/><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/></svg></div>
+        <h3>Operational Support</h3>
+        <p>Day-to-day tasks and processes your team doesn't have the bandwidth for, or would rather hand off.</p>
+      </div>
+      <div class="card">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="m3.3 7 8.7 5 8.7-5M12 22V12"/></svg></div>
+        <h3>Logistics &amp; Transportation</h3>
+        <p>Coordinating and moving goods or materials, with tracking and clear communication from pickup to delivery.</p>
+      </div>
+      <div class="card">
+        <div class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M8 4v16"/></svg></div>
+        <h3>Administrative Services</h3>
+        <p>Document organization, paperwork handling, follow-ups, and keeping your records in order.</p>
+      </div>
+      <div class="card">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2z"/><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"/></svg></div>
+        <h3>Guidance &amp; Errands</h3>
+        <p>We help you understand and move forward with processes that feel confusing — especially when language is a barrier.</p>
+      </div>
+      <div class="card">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <h3>Local U.S. Representation</h3>
+        <p>Based outside the United States? We act as your local point of contact to serve your customers here.</p>
+      </div>
+      <div class="card feature">
+        <div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg></div>
+        <h3>Don't see your project here?</h3>
+        <p>Chances are we can still help — or point you to someone who can. Send us a message and we'll review it, no obligation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="alt" id="about">
+  <div class="wrap why-grid">
+    <div>
+      <span class="tag">Why Us</span>
+      <h2>Flexible, legitimate, and straight with you</h2>
+      <p style="color:var(--muted);margin-bottom:34px">Most companies turn you away because your request doesn't fit their catalog. We start by listening to the actual problem, then decide.</p>
+      <ul class="why-list">
+        <li>
+          <span class="check"><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg></span>
+          <div><h4>No industry limits</h4><p>We take on a wide range of projects. If it's lawful and within our reach, we'll consider it.</p></div>
+        </li>
+        <li>
+          <span class="check"><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg></span>
+          <div><h4>A properly registered business</h4><p>An LLC formed in the United States, with paperwork in order so you can contract with confidence.</p></div>
+        </li>
+        <li>
+          <span class="check"><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg></span>
+          <div><h4>We'll tell you the truth</h4><p>If it isn't a good fit, we say so upfront instead of wasting your time and money.</p></div>
+        </li>
+        <li>
+          <span class="check"><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg></span>
+          <div><h4>Genuinely bilingual</h4><p>We work in English and Spanish, which removes the misunderstandings that cost projects time.</p></div>
+        </li>
+        <li>
+          <span class="check"><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg></span>
+          <div><h4>Talk to the decision-maker</h4><p>You deal with us directly — no call center, no layers of middlemen.</p></div>
+        </li>
+      </ul>
+    </div>
+    <div class="why-panel">
+      <h3>Not sure if we're the right fit?</h3>
+      <p>That's the easiest question to settle. Describe your situation in a couple of lines and we'll come back with a yes, a no, or a better alternative — free and with no obligation.</p>
+      <a href="#contact" class="btn btn-gold">Ask About My Project</a>
+    </div>
+  </div>
+</section>
+<section id="process">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="tag">How We Work</span>
+      <h2>Four steps, no runaround</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><h4>You reach out</h4><p>Send us a message through the form, by email, or by phone explaining what you need handled.</p></div>
+      <div class="step"><h4>We assess it</h4><p>We review whether it's something we can do well, on what timeline, and under what terms.</p></div>
+      <div class="step"><h4>We quote it</h4><p>You get a written proposal with clear pricing and scope. No hidden fees, no surprises.</p></div>
+      <div class="step"><h4>We deliver</h4><p>We follow the job through to completion and keep you updated at every step.</p></div>
+    </div>
+  </div>
+</section>
+<section class="alt" id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <span class="tag">Contact</span>
+      <h2>Let's talk</h2>
+      <p style="color:var(--muted)">We answer every message. If your request is urgent, email or call us directly.</p>
+      <div class="contact-info">
+        <div class="ci">
+          <span class="ci-icon"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg></span>
+          <div><strong>Email</strong><a href="mailto:info@getjuanva.com">info@getjuanva.com</a></div>
+        </div>
+        <div class="ci">
+          <span class="ci-icon"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>
+          <div><strong>Phone</strong><a href="tel:+19292785545">(929) 278-5545</a></div>
+        </div>
+        <div class="ci">
+          <span class="ci-icon"><svg viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+          <div><strong>Location</strong><span>United States</span></div>
+        </div>
+        <div class="ci">
+          <span class="ci-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
+          <div><strong>Hours</strong><span>Monday – Friday, 8:00 AM – 6:00 PM</span></div>
+        </div>
+      </div>
+    </div>
+    <form action="mailto:info@getjuanva.com" method="post" enctype="text/plain">
+      <div class="field">
+        <label for="name">Full name</label>
+        <input type="text" id="name" name="Name" required placeholder="Your name">
+      </div>
+      <div class="field">
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="Email" required placeholder="you@example.com">
+      </div>
+      <div class="field">
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="Phone" placeholder="(000) 000-0000">
+      </div>
+      <div class="field">
+        <label for="type">Type of request</label>
+        <select id="type" name="Type">
+          <option>Operational support</option>
+          <option>Logistics &amp; transportation</option>
+          <option>Administrative services</option>
+          <option>Guidance &amp; errands</option>
+          <option>Local U.S. representation</option>
+          <option>Other — explained below</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="message">What do you need handled?</label>
+        <textarea id="message" name="Message" required placeholder="Briefly describe your situation: what you need, where, and by when."></textarea>
+      </div>
+      <button type="submit" class="btn btn-gold">Send Request</button>
+      <p class="form-note">We typically respond within 24 business hours.</p>
+    </form>
+  </div>
+</section>
+<footer>
+  <div class="wrap">
+    <div class="f-top">
+      <div class="f-brand">
+        <div class="logo">
+          <div class="logo-mark">JV</div>
+          <div class="logo-text">Juanva Solutions<span>LLC</span></div>
+        </div>
+        <p>A U.S.-registered general services company. We adapt to what your project needs — always within the law.</p>
+      </div>
+      <div class="f-col">
+        <h5>Services</h5>
+        <a href="#services">Operational support</a>
+        <a href="#services">Logistics &amp; transportation</a>
+        <a href="#services">Administrative services</a>
+        <a href="#services">Guidance &amp; errands</a>
+      </div>
+      <div class="f-col">
+        <h5>Company</h5>
+        <a href="#about">Why us</a>
+        <a href="#process">How we work</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="f-col">
+        <h5>Get in touch</h5>
+        <a href="mailto:info@getjuanva.com">info@getjuanva.com</a>
+        <a href="tel:+19292785545">(929) 278-5545</a>
+      </div>
+    </div>
+    <div class="f-bot">
+      <span>&copy; <span id="year"></span> Juanva Solutions LLC. All rights reserved.</span>
+      <span>getjuanva.com</span>
+    </div>
+  </div>
+</footer>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  var mb = document.getElementById('menuBtn'), nl = document.getElementById('navLinks');
+  mb.addEventListener('click', function(){ nl.classList.toggle('open'); });
+  nl.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){ nl.classList.remove('open'); });
+  });
+</script>
+</body>
+</html>
